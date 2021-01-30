@@ -8,9 +8,10 @@ const ROTATION_SPEED = 3.5
 
 var motion = Vector2()
 var direction := 0
+var can_jump = true
 
-func _physics_process(_delta):
-	walk(_delta)
+func _physics_process(delta):
+	walk(delta)
 	
 
 func walk(delta):
@@ -26,13 +27,18 @@ func walk(delta):
 	else:
 		motion.x = 0
 		friction = true
-
+	if can_jump:
+		if Input.is_action_pressed("ui_select"):
+			motion.y = JUMP_FORCE
+			can_jump = false
 	
 	if is_on_floor(): 
 		if Input.is_action_pressed("ui_select"):
 			motion.y = JUMP_FORCE
 		if friction:
 			motion.x = lerp(motion.x,0, 0.2)
+		if not can_jump:
+			can_jump = true
 	else:
 		if friction:
 			motion.x = lerp(motion.x,0, 0.05)
