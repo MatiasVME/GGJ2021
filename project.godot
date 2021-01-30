@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GGJ2021"
-run/main_scene="res://Tests/KinematicStage.tscn"
+run/main_scene="res://Tests/GameplayTest.tscn"
 config/icon="res://icon.png"
 
 [autoload]
