@@ -27,19 +27,19 @@ func walk(delta):
 	else:
 		motion.x = 0
 		friction = true
-	if can_jump:
-		if Input.is_action_pressed("ui_select"):
-			motion.y = JUMP_FORCE
-			can_jump = false
 	
 	if is_on_floor(): 
-		if Input.is_action_pressed("ui_select"):
+		if Input.is_action_just_pressed("ui_select"):
 			motion.y = JUMP_FORCE
 		if friction:
 			motion.x = lerp(motion.x,0, 0.2)
 		if not can_jump:
 			can_jump = true
 	else:
+		if can_jump:
+			if Input.is_action_just_pressed("ui_select"):
+					motion.y = JUMP_FORCE
+					can_jump = false
 		if friction:
 			motion.x = lerp(motion.x,0, 0.05)
 			
