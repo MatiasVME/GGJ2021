@@ -19,6 +19,11 @@ config/name="GGJ2021"
 run/main_scene="res://MainScreens/Splash.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Main="*res://Autoloads/Main.gd"
+SoundManager="*res://Autoloads/SoundManager.tscn"
+
 [display]
 
 window/size/width=1280
