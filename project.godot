@@ -34,6 +34,7 @@ config/icon="res://icon.png"
 
 Main="*res://Autoloads/Main.gd"
 SoundManager="*res://Autoloads/SoundManager.tscn"
+Transition="*res://Autoloads/Transition.tscn"
 
 [display]
 

@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 # Progreso de la transición
 var cutoff := 0.0
