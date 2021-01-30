@@ -5,7 +5,13 @@ const GRAVITY = 9.8
 const MAX_SPEED = 200
 const JUMP_FORCE = -500
 const ROTATION_SPEED = 3.5
+
 var motion = Vector2()
+
+var direction = 0
+
+var can_move_left := true
+
 
 func _physics_process(_delta):
 	walk(_delta)
@@ -15,10 +21,12 @@ func walk(delta):
 	motion.y += GRAVITY
 	var friction = false
 	
-	if Input.is_action_pressed("ui_right"):
+	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
+	
+	if direction == 1:
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 		$Sprite.rotation += ROTATION_SPEED * delta
-	elif Input.is_action_pressed("ui_left"):
+	elif direction == -1:
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 		$Sprite.rotation += -ROTATION_SPEED * delta
 	else:
@@ -34,4 +42,3 @@ func walk(delta):
 		if friction:
 			motion.x = lerp(motion.x,0, 0.05)
 	motion = move_and_slide(motion, Vector2(0,-1))
-	print(is_on_floor())
