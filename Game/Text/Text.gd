@@ -9,10 +9,10 @@ func _ready():
 
 
 func _on_DetectArea_body_entered(body):
-#	if body is Player:
-	$Anim.play("Show")
+	if body is Player:
+		$Anim.play("Show")
 
 
 func _on_DetectArea_body_exited(body):
-#	if body is Player:
-	$Anim.play_backwards("Show")
+	if body is Player:
+		$Anim.play_backwards("Show")
