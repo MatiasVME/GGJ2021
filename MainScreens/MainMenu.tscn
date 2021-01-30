@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Fonts/DOS-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainScreens/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.2255, 20.2079 )
@@ -186,6 +187,10 @@ text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Hook" parent="." instance=ExtResource( 4 )]
+position = Vector2( 662.846, 249.302 )
+scale = Vector2( 4.56, 4.56 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 155.103, 514.157 )

@@ -11,10 +11,13 @@ const ROTATION_SPEED = 3.5
 var motion = Vector2()
 var direction := 0
 var can_jump = true
+var hooked = false
 
 func _physics_process(delta):
-	walk(delta)
-	
+	if not hooked:
+		walk(delta)
+	else:
+		seized()
 
 func walk(delta):
 	motion.y += GRAVITY
@@ -47,5 +50,10 @@ func walk(delta):
 			
 	motion = move_and_slide(motion, Vector2(0,-1))
 
-
-
+func seized():
+	if not can_jump:
+		can_jump = true
+	
+	if Input.is_action_just_pressed("ui_select"):
+		motion.y = JUMP_FORCE
+		hooked = false
