@@ -61,4 +61,4 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 507.505, 420.505 )
+position = Vector2( 152.965, 471.154 )
