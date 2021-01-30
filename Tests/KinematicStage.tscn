@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tests/BolitaKinematic.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 522.205, 21.5626 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 508.733, 566.711 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_left = -520.429
+margin_top = -20.6268
+margin_right = -480.429
+margin_bottom = 19.3732
+rect_scale = Vector2( 25.96, 1 )
+color = Color( 0.972549, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 670.477, 487.597 )
+rotation = -0.327669
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+margin_left = -520.429
+margin_top = -20.6268
+margin_right = -480.429
+margin_bottom = 19.3732
+rect_scale = Vector2( 25.96, 1 )
+color = Color( 0.972549, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 947.096, 768.112 )
+rotation = -2.1171
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+margin_left = -520.429
+margin_top = -20.6268
+margin_right = -480.429
+margin_bottom = 19.3732
+rect_scale = Vector2( 25.96, 1 )
+color = Color( 0.972549, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 507.505, 420.505 )
