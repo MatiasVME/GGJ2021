@@ -17,16 +17,6 @@ func walk(delta):
 	motion.y += GRAVITY
 	var friction = false
 	
-#	if Input.is_action_pressed("ui_right"):
-#		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
-#		$Sprite.rotation += ROTATION_SPEED * delta
-#	elif Input.is_action_pressed("ui_left"):
-#		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
-#		$Sprite.rotation += -ROTATION_SPEED * delta
-#	else:
-#		motion.x = 0
-#		friction = true
-
 	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	
 	if direction == 1:
