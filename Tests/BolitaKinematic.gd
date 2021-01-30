@@ -9,6 +9,9 @@ const ROTATION_SPEED = 3.5
 var motion = Vector2()
 var direction := 0
 
+var can_move_left := true
+
+
 func _physics_process(_delta):
 	walk(_delta)
 	
@@ -16,7 +19,7 @@ func _physics_process(_delta):
 func walk(delta):
 	motion.y += GRAVITY
 	var friction = false
-	
+
 #	if Input.is_action_pressed("ui_right"):
 #		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 #		$Sprite.rotation += ROTATION_SPEED * delta
