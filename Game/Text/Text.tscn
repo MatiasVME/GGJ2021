@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Game/Text/Text.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/DOS-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 308.957
+
+[sub_resource type="Animation" id=3]
+resource_name = "Show"
+
+[node name="Text" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Text" type="Label" parent="."]
+margin_left = -477.71
+margin_top = -286.353
+margin_right = 482.29
+margin_bottom = 287.647
+custom_fonts/font = SubResource( 1 )
+text = "Hola mundo"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Area"]
+shape = SubResource( 2 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+anims/Show = SubResource( 3 )
