@@ -36,6 +36,7 @@ margin_top = -286.353
 margin_right = 482.29
 margin_bottom = 287.647
 custom_fonts/font = SubResource( 1 )
+text = "hola"
 align = 1
 valign = 1
 autowrap = true
@@ -51,3 +52,5 @@ shape = SubResource( 2 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/Show = SubResource( 3 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

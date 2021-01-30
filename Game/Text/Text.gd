@@ -4,15 +4,15 @@ export (String) var the_text
 
 
 func _ready():
-	$Label.text = the_text
-	$Label.modulate.a = 0
+	$Text.text = the_text
+	$Text.modulate.a = 0
 
 
-func _on_DetectArea_body_entered(body):
+func _on_Area_body_entered(body):
 	if body is Player:
 		$Anim.play("Show")
 
 
-func _on_DetectArea_body_exited(body):
+func _on_Area_body_exited(body):
 	if body is Player:
 		$Anim.play_backwards("Show")
