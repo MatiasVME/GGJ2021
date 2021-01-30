@@ -92,7 +92,7 @@ position = Vector2( 967.032, 731.754 )
 shape = SubResource( 2 )
 
 [node name="Text" parent="." instance=ExtResource( 3 )]
-position = Vector2( 707.981, 380.976 )
+position = Vector2( 564.35, 370.897 )
 the_text = "Hola mundo :)"
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
