@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gancho.png-3533dcdeb9f91474131e106f4cb8d0af.stex"
+path="res://.import/gancho_delante.png-9010722406d7488286813ea4886f70a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Hook/gancho.png"
-dest_files=[ "res://.import/gancho.png-3533dcdeb9f91474131e106f4cb8d0af.stex" ]
+source_file="res://Game/Hook/gancho_delante.png"
+dest_files=[ "res://.import/gancho_delante.png-9010722406d7488286813ea4886f70a0.stex" ]
 
 [params]
 

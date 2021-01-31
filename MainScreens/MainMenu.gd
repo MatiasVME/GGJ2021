@@ -12,6 +12,6 @@ func _on_Exit_body_entered(body):
 	if body == $Player:
 		get_tree().quit()
 
-
-func _on_Credits_pressed():
-	Transition.change_scene("res://MainScreens/Credits.tscn")
+func _on_Credits_body_entered(body):
+	if body == $Player:
+		Transition.change_scene("res://MainScreens/Credits.tscn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://MainScreens/creditos.png" type="Texture" id=1]
 [ext_resource path="res://MainScreens/Credits.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Text.tres" type="DynamicFont" id=3]
 
 [node name="Credits" type="Node2D"]
 script = ExtResource( 2 )
@@ -13,4 +14,15 @@ texture_normal = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 379.131
+margin_top = 656.381
+margin_right = 915.131
+margin_bottom = 787.381
+custom_fonts/font = ExtResource( 3 )
+text = "Press Enter to Return
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
