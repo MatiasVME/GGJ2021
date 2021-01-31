@@ -131,6 +131,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="Credits"]
+margin_left = -11.634
+margin_top = 54.7189
+margin_right = 121.366
+margin_bottom = 94.7189
+custom_fonts/font = SubResource( 4 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Hook" parent="." instance=ExtResource( 4 )]
 position = Vector2( 661.076, 287.762 )
 

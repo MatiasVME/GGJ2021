@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Game/Background/fondo_nivel1.png" type="Texture" id=1]
+[ext_resource path="res://Game/Levels/Level_2/nivel2_fondo-nuevo.png" type="Texture" id=1]
 [ext_resource path="res://Game/Levels/Level_2/nivel2.png" type="Texture" id=2]
 [ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/Respawn/Respawn.tscn" type="PackedScene" id=4]
