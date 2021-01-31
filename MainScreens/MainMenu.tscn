@@ -194,5 +194,14 @@ scale = Vector2( 4.56, 4.56 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 155.103, 514.157 )
+
+[node name="Credits" type="TextureButton" parent="."]
+margin_left = 1029.0
+margin_top = 89.0
+margin_right = 1197.0
+margin_bottom = 227.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Start" to="." method="_on_Start_body_entered"]
 [connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
