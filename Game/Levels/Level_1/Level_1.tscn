@@ -3,7 +3,7 @@
 [ext_resource path="res://Game/Levels/Level_1/plataformas-nivel1.png" type="Texture" id=1]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/Text/Text.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Game/Levels/Level_1/nivel1_fondo-0.png" type="Texture" id=4]
+[ext_resource path="res://Game/Levels/Level_1/nivel1_fondo1.png" type="Texture" id=4]
 [ext_resource path="res://Game/Levels/Level_1/Level_1.gd" type="Script" id=5]
 [ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Respawn/Respawn.tscn" type="PackedScene" id=7]
@@ -31,7 +31,7 @@ script = ExtResource( 5 )
 layer = -1
 
 [node name="Background" type="Sprite" parent="HUD"]
-position = Vector2( -428.516, 0 )
+position = Vector2( -260.251, 0 )
 texture = ExtResource( 4 )
 centered = false
 
