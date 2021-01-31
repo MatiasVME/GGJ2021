@@ -122,10 +122,25 @@ anims/ZoomPlay = SubResource( 2 )
 [node name="NewPos" type="Node2D" parent="."]
 
 [node name="Pos1" type="Position2D" parent="NewPos"]
-position = Vector2( 3975, 0 )
+position = Vector2( 3925, 0 )
 
 [node name="Pos2" type="Position2D" parent="NewPos"]
-position = Vector2( 8172, 4371 )
+position = Vector2( 8123, 4371 )
+
+[node name="Hook3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6213, 1789 )
+
+[node name="Hook4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6378, 1519 )
+
+[node name="Hook5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6197, 1275 )
+
+[node name="Hook6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6378, 1053 )
+
+[node name="Hook7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6251, 875 )
 [connection signal="body_entered" from="AnimZoom" to="." method="_on_AnimZoom_body_entered"]
 
 [editable path="Player/Camera"]
