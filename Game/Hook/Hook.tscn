@@ -3,7 +3,7 @@
 [ext_resource path="res://Game/Hook/Hook.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 3.37146
+radius = 8.67379
 
 [node name="Hook" type="Node2D"]
 scale = Vector2( 4.32, 4.32 )
