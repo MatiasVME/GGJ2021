@@ -44,6 +44,7 @@ func _ready():
 					file_name_key = file_name.replace("." + EXTENSION, "")
 					sounds[file_name_key] = load(file_name_to_load)
 			file_name = dir.get_next()
+			
 	
 # Nombre del sonido a ejecutar sin extenciòn .ogg,
 # por ejemplo GOOD_BLOCK_KILL

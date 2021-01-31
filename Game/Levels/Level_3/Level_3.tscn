@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Game/Levels/Level_3/Level_3.gd" type="Script" id=1]
+[ext_resource path="res://Game/Levels/Level_3/nivel3.png" type="Texture" id=2]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Levels/Level_3/nivel3_fondo.png" type="Texture" id=5]
+
+[node name="Level_3" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="Sprite" parent="HUD"]
+position = Vector2( -90, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Platforms" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Platform" type="StaticBody2D" parent="."]
+
+[node name="Collision" type="CollisionPolygon2D" parent="Platform"]
+position = Vector2( -2721, 462 )
+polygon = PoolVector2Array( 2725, 3731, 4135, 3727, 4140, 3659, 4221, 3659, 4225, 3614, 4351, 3614, 4355, 3529, 4477, 3525, 4472, 3417, 4729, 3407, 4723, 3174, 4938, 3173, 4930, 3100, 5092, 3103, 5074, 3920, 2721, 3938 )
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+
+[node name="Collision" type="CollisionPolygon2D" parent="Platform2"]
+position = Vector2( -2721, 462 )
+polygon = PoolVector2Array( 5051, 3256, 5304, 3274, 5304, 3335, 5512, 3331, 5516, 3267, 5727, 3267, 5727, 3187, 5829, 3191, 5841, 3127, 5969, 3127, 5965, 3063, 6018, 3055, 6037, 2995, 6101, 2987, 6105, 2927, 6169, 2919, 6180, 2851, 6252, 2855, 6252, 2788, 6317, 2783, 6327, 2725, 6390, 2723, 6403, 2650, 6471, 2647, 6481, 2576, 6542, 2584, 6552, 2456, 6617, 2458, 6626, 2302, 6694, 2295, 6694, 2161, 6697, 1954, 6838, 1957, 6843, 2151, 6843, 2295, 6640, 3892, 5095, 3869 )
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+
+[node name="Collision" type="CollisionPolygon2D" parent="Platform3"]
+position = Vector2( -2721, 462 )
+polygon = PoolVector2Array( 6843, 2305, 6911, 2305, 6921, 2441, 6984, 2441, 6996, 2564, 7054, 2569, 7067, 2615, 8284, 2630, 8284, 2511, 8355, 2504, 8362, 2365, 8438, 2365, 8433, 2237, 8506, 2234, 8506, 2101, 8576, 2093, 8581, 1959, 8647, 1959, 8657, 1826, 8728, 1823, 8725, 1695, 8798, 1675, 8798, 1609, 9231, 1604, 9224, 3058, 6717, 3015 )
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+
+[node name="Collision" type="CollisionPolygon2D" parent="Platform4"]
+position = Vector2( -2721, 462 )
+polygon = PoolVector2Array( 9226, 1612, 9236, 425, 9310, 418, 9310, 351, 9445, 354, 9455, 422, 9516, 422, 9532, 748, 9596, 751, 9610, 1387, 9741, 1387, 9761, 2732, 10034, 2732, 10047, 3725, 10903, 3729, 10911, 3925, 9307, 3937 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 238, 3346 )
+
+[node name="Camera" parent="Player" instance=ExtResource( 4 )]
+
+[node name="Pos1" parent="Player/Camera" index="0"]
+position = Vector2( -244, -1582 )
+
+[node name="Pos2" parent="Player/Camera" index="1"]
+position = Vector2( 3931, 1049 )
+
+[editable path="Player/Camera"]

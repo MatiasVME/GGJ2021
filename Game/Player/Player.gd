@@ -30,12 +30,10 @@ func walk(delta):
 		$sprite.set_flip_h(false)
 		$sprite.play("walk")
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
-		SoundManager.play_sound("CANDADO_PASOS")
 	elif direction == -1:
 		$sprite.set_flip_h(true)
 		$sprite.play("walk")
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
-		SoundManager.play_sound("CANDADO_PASOS")
 	else:
 		$sprite.play("idle")
 		motion.x = 0
