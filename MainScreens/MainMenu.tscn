@@ -7,10 +7,12 @@
 [ext_resource path="res://MainScreens/menu2.png" type="Texture" id=5]
 [ext_resource path="res://MainScreens/logo.png" type="Texture" id=6]
 
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.2255, 20.2079 )
 
 [sub_resource type="RectangleShape2D" id=2]
+
 extents = Vector2( 20.2044, 19.8987 )
 
 [sub_resource type="DynamicFont" id=3]
