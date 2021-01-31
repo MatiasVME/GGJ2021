@@ -192,6 +192,7 @@ __meta__ = {
 position = Vector2( 661.076, 287.762 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+
 position = Vector2( 155.103, 514.157 )
 
 [node name="Credits" type="TextureButton" parent="."]
@@ -202,6 +203,7 @@ margin_bottom = 227.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="body_entered" from="Start" to="." method="_on_Start_body_entered"]
 [connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
