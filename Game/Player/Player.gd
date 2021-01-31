@@ -27,10 +27,8 @@ func walk(delta):
 	
 	if direction == 1:
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
-		SoundManager.play_sound("CANDADO_PASOS")
 	elif direction == -1:
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
-		SoundManager.play_sound("CANDADO_PASOS")
 	else:
 		motion.x = 0
 		friction = true

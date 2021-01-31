@@ -16,10 +16,10 @@ extents = Vector2( 392.905, 92.9842 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 125.515, 92.9842 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 160.271, 92.9842 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 132.937, 92.9842 )
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -58,14 +58,14 @@ position = Vector2( 2206.55, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/P3"]
 position = Vector2( 550.386, 558.927 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="P4" type="StaticBody2D" parent="Platform"]
 position = Vector2( 992.008, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/P4"]
 position = Vector2( 550.386, 558.927 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="P5" type="StaticBody2D" parent="Platform"]
 position = Vector2( 1297.01, -151 )
