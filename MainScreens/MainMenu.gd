@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	MusicManager.play(MusicManager.Music.NIVEL_1)
+
 func _on_Start_body_entered(body):
 	if body == $Player:
 #		get_tree().change_scene("res://Tests/GameplayTest.tscn")

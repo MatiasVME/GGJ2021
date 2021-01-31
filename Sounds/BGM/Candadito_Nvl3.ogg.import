@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Candadito_Nvl3.ogg-93c8a2d8850e28166f0382aaee5082a2.oggstr"
+
+[deps]
+
+source_file="res://Sounds/BGM/Candadito_Nvl3.ogg"
+dest_files=[ "res://.import/Candadito_Nvl3.ogg-93c8a2d8850e28166f0382aaee5082a2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

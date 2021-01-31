@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/CANDADO_PASOS.ogg-630052ff1d88d54151f59f9038b13fee.oggstr"
+
+[deps]
+
+source_file="res://Sounds/SFX/CANDADO_PASOS.ogg"
+dest_files=[ "res://.import/CANDADO_PASOS.ogg-630052ff1d88d54151f59f9038b13fee.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
