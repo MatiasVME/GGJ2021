@@ -106,6 +106,7 @@ next_scene = "res://Game/Levels/Level_3/Level_3.tscn"
 
 [node name="Collision" parent="EndLevel" index="0"]
 position = Vector2( 3.896, 0 )
+shape = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 94.9347, 353.816 )
@@ -116,12 +117,10 @@ position = Vector2( -0.726395, 1.00656 )
 [node name="Pos2" parent="Player/Camera" index="1"]
 position = Vector2( 3113.21, 360.221 )
 
-[node name="Collision" parent="EndLevel" index="0"]
-shape = SubResource( 2 )
-
 [node name="Text" parent="." instance=ExtResource( 9 )]
 position = Vector2( 509.594, 231.634 )
 the_text = "Y esto no sera tan facil"
 
-[editable path="Player/Camera"]
 [editable path="EndLevel"]
+
+[editable path="Player/Camera"]

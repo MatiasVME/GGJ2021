@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Game/Levels/Level_4/nivel4_fondo.png" type="Texture" id=1]
+[ext_resource path="res://Game/Levels/Level_4/nivel4.png" type="Texture" id=2]
+[ext_resource path="res://Game/Respawn/Respawn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Levels/Level_4/Level_4.gd" type="Script" id=5]
+[ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Level_4" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite" parent="HUD"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Platform" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
+position = Vector2( 624.357, 4712.31 )
+scale = Vector2( 63.1677, -12.44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platform"]
+position = Vector2( 3293.88, 4513.22 )
+scale = Vector2( 11.4416, -27.2619 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D3"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Platform"]
+position = Vector2( 2016.74, 4625.62 )
+scale = Vector2( 30.0465, -21.7277 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D4"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Platform"]
+position = Vector2( 2035.87, 4577.79 )
+scale = Vector2( 6.84648, -21.7277 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D5"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Platform"]
+position = Vector2( 2150.67, 4529.96 )
+scale = Vector2( 8.56648, -21.7277 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D6"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Platform"]
+position = Vector2( 2277.43, 4496.47 )
+scale = Vector2( 4.96648, -21.7277 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D7"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platform"]
+position = Vector2( 7238.07, 4733.2 )
+scale = Vector2( 305.728, -12.44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D2"]
+shape = SubResource( 1 )
+
+[node name="Respawn" parent="." instance=ExtResource( 3 )]
+position = Vector2( 115.854, 4467.08 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 413.51, 3845.86 )
+
+[node name="Camera" parent="Player" instance=ExtResource( 6 )]
+position = Vector2( 51.746, 310.476 )
+
+[node name="Hook" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1471.84, 4494.75 )
+
+[node name="Hook2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2509.47, 4190.17 )
+
+[node name="Hook3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3020.54, 4174.69 )
+
+[node name="Hook4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2777.91, 4283.1 )
+
+[node name="Hook5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3516.12, 4293.42 )
+
+[node name="Hook6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3748.42, 4257.28 )
+
+[node name="Hook7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3996.21, 4365.69 )

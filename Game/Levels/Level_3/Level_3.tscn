@@ -84,18 +84,6 @@ polygon = PoolVector2Array( 6843, 2305, 6911, 2305, 6921, 2441, 6984, 2441, 6996
 position = Vector2( -2721, 462 )
 polygon = PoolVector2Array( 9226, 1612, 9236, 425, 9310, 418, 9310, 351, 9445, 354, 9455, 422, 9516, 422, 9532, 748, 9596, 751, 9610, 1387, 9741, 1387, 9761, 2732, 10034, 2732, 10047, 3725, 10903, 3729, 10911, 3925, 9307, 3937 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 238, 3346 )
-
-[node name="Camera" parent="Player" instance=ExtResource( 4 )]
-process_mode = 0
-
-[node name="Pos1" parent="Player/Camera" index="0"]
-position = Vector2( -244, -1582 )
-
-[node name="Pos2" parent="Player/Camera" index="1"]
-position = Vector2( 3931, 1049 )
-
 [node name="Hook" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1769, 3619 )
 
@@ -131,18 +119,45 @@ position = Vector2( 8123, 4371 )
 position = Vector2( 6213, 1789 )
 
 [node name="Hook4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6378, 1519 )
+position = Vector2( 6378, 1652.93 )
 
 [node name="Hook5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6197, 1275 )
+position = Vector2( 6206.57, 1550.04 )
 
 [node name="Hook6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6378, 1053 )
+position = Vector2( 6417.76, 884.098 )
 
 [node name="Hook7" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6251, 875 )
+position = Vector2( 6235.54, 989.362 )
+
+[node name="Hook8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6074.82, 1079 )
+
+[node name="Hook9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6062.46, 1480.81 )
+
+[node name="Hook10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6244.82, 1372.63 )
+
+[node name="Hook11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6077.91, 1295.36 )
+
+[node name="Hook12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5938.82, 1196.45 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 238, 4053.81 )
+
+[node name="Camera" parent="Player" instance=ExtResource( 4 )]
+process_mode = 0
+
+[node name="Pos1" parent="Player/Camera" index="0"]
+position = Vector2( -244, -1582 )
+
+[node name="Pos2" parent="Player/Camera" index="1"]
+position = Vector2( 3931, 1049 )
 [connection signal="body_entered" from="AnimZoom" to="." method="_on_AnimZoom_body_entered"]
 
-[editable path="Player/Camera"]
-
 [editable path="Text2"]
+
+[editable path="Player/Camera"]
