@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Game/Levels/Level_3/Level_3.gd" type="Script" id=1]
 [ext_resource path="res://Game/Levels/Level_3/nivel3.png" type="Texture" id=2]
 [ext_resource path="res://Game/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Game/Levels/Level_3/nivel3_fondo.png" type="Texture" id=5]
+[ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=6]
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource( 1 )
@@ -58,5 +59,11 @@ position = Vector2( -244, -1582 )
 
 [node name="Pos2" parent="Player/Camera" index="1"]
 position = Vector2( 3931, 1049 )
+
+[node name="Hook" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1769, 3619 )
+
+[node name="Hook2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3825, 2522 )
 
 [editable path="Player/Camera"]
