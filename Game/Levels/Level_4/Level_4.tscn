@@ -81,6 +81,12 @@ position = Vector2( 413.51, 3845.86 )
 [node name="Camera" parent="Player" instance=ExtResource( 6 )]
 position = Vector2( 51.746, 310.476 )
 
+[node name="Pos1" parent="Player/Camera" index="0"]
+position = Vector2( -465.31, -4146.34 )
+
+[node name="Pos2" parent="Player/Camera" index="1"]
+position = Vector2( 9843.73, 699.84 )
+
 [node name="Hook" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1471.84, 4494.75 )
 
@@ -101,3 +107,5 @@ position = Vector2( 3748.42, 4257.28 )
 
 [node name="Hook7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3996.21, 4365.69 )
+
+[editable path="Player/Camera"]
