@@ -1,9 +1,0 @@
-[gd_scene format=2]
-
-[node name="RichTextPulse" type="RichTextLabel"]
-margin_right = 330.0
-margin_bottom = 185.0
-bbcode_enabled = true
-__meta__ = {
-"_edit_use_anchors_": false
-}

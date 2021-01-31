@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Game/Levels/Level_3/Level_3.gd" type="Script" id=1]
 [ext_resource path="res://Game/Levels/Level_3/nivel3.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Game/Levels/Level_3/nivel3_fondo.png" type="Texture" id=5]
 [ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Text/Text.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/EndLevel/EndLevel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game/BadKey/BadKey.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 50 )
@@ -92,11 +94,19 @@ position = Vector2( 3825, 2522 )
 
 [node name="Text" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2711, 3529 )
-the_text = "Es dificil"
+the_text = "Estoy cansado..."
+
+[node name="Text3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 836, 3906 )
+the_text = "Una nueva aventura!"
+
+[node name="Text4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4545, 2797 )
+the_text = "A empezar otra vez..."
 
 [node name="Text2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3898, 2222 )
-the_text = "Pero llegas a la cima"
+the_text = "Pero llegue a la cima"
 
 [node name="AnimZoom" type="Area2D" parent="."]
 position = Vector2( 4048, 2348 )
@@ -152,12 +162,21 @@ position = Vector2( 238, 4053.81 )
 process_mode = 0
 
 [node name="Pos1" parent="Player/Camera" index="0"]
-position = Vector2( -244, -1582 )
+position = Vector2( -244, -2539.81 )
 
 [node name="Pos2" parent="Player/Camera" index="1"]
-position = Vector2( 3931, 1049 )
+position = Vector2( 3931, 333.19 )
+
+[node name="EndLevel" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8249, 4069 )
+next_scene = "res://Game/Levels/Level_4/Level_4.tscn"
+
+[node name="BadKey" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4056, 2298 )
 [connection signal="body_entered" from="AnimZoom" to="." method="_on_AnimZoom_body_entered"]
 
 [editable path="Text2"]
 
 [editable path="Player/Camera"]
+
+[editable path="EndLevel"]
