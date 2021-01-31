@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Game/Levels/Level_3/Level_3.gd" type="Script" id=1]
 [ext_resource path="res://Game/Levels/Level_3/nivel3.png" type="Texture" id=2]
@@ -8,8 +8,42 @@
 [ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Text/Text.tscn" type="PackedScene" id=7]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50, 50 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "ZoomPlay"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Player/Camera:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2, 8.7, 9.2, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 3.2, 3.2 ), Vector2( 3, 3 ), Vector2( 3, 3 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Text2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [node name="Level_3" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 3975.0 ]
+}
 
 [node name="HUD" type="CanvasLayer" parent="."]
 layer = -1
@@ -54,6 +88,7 @@ polygon = PoolVector2Array( 9226, 1612, 9236, 425, 9310, 418, 9310, 351, 9445, 3
 position = Vector2( 238, 3346 )
 
 [node name="Camera" parent="Player" instance=ExtResource( 4 )]
+process_mode = 0
 
 [node name="Pos1" parent="Player/Camera" index="0"]
 position = Vector2( -244, -1582 )
@@ -75,4 +110,24 @@ the_text = "Es dificil"
 position = Vector2( 3898, 2222 )
 the_text = "Pero llegas a la cima"
 
+[node name="AnimZoom" type="Area2D" parent="."]
+position = Vector2( 4048, 2348 )
+
+[node name="Collision" type="CollisionShape2D" parent="AnimZoom"]
+shape = SubResource( 1 )
+
+[node name="Anim" type="AnimationPlayer" parent="AnimZoom"]
+anims/ZoomPlay = SubResource( 2 )
+
+[node name="NewPos" type="Node2D" parent="."]
+
+[node name="Pos1" type="Position2D" parent="NewPos"]
+position = Vector2( 3975, 0 )
+
+[node name="Pos2" type="Position2D" parent="NewPos"]
+position = Vector2( 8172, 4371 )
+[connection signal="body_entered" from="AnimZoom" to="." method="_on_AnimZoom_body_entered"]
+
 [editable path="Player/Camera"]
+
+[editable path="Text2"]
