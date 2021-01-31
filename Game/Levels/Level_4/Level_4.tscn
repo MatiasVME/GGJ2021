@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Game/Levels/Level_4/nivel4_fondo.png" type="Texture" id=1]
 [ext_resource path="res://Game/Levels/Level_4/nivel4.png" type="Texture" id=2]
@@ -7,19 +7,41 @@
 [ext_resource path="res://Game/Levels/Level_4/Level_4.gd" type="Script" id=5]
 [ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Hook/Hook.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/Text/Text.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 225.279, 135.716 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "New Anim"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [node name="Level_4" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="Background" type="Sprite" parent="HUD"]
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Platform" type="Sprite" parent="."]
+position = Vector2( -3.11737, -4099.59 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -28,6 +50,14 @@ position = Vector2( 624.357, 4712.31 )
 scale = Vector2( 63.1677, -12.44 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Platform"]
+position = Vector2( -122.951, 4412.86 )
+rotation = 1.57079
+scale = Vector2( 63.1677, -12.44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D8"]
 shape = SubResource( 1 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Platform"]
@@ -72,32 +102,77 @@ scale = Vector2( 305.728, -12.44 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D2"]
 shape = SubResource( 1 )
 
-[node name="Respawn" parent="." instance=ExtResource( 3 )]
-position = Vector2( 115.854, 4467.08 )
-
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 413.51, 3845.86 )
-
-[node name="Camera" parent="Player" instance=ExtResource( 6 )]
-position = Vector2( 51.746, 310.476 )
-
 [node name="Hook" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1471.84, 4494.75 )
+position = Vector2( 1471.84, 360.827 )
 
 [node name="Hook2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2509.47, 4190.17 )
+position = Vector2( 2509.47, 56.2465 )
 
 [node name="Hook3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3020.54, 4174.69 )
+position = Vector2( 3020.54, 40.767 )
 
 [node name="Hook4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2777.91, 4283.1 )
+position = Vector2( 2777.91, 149.177 )
 
 [node name="Hook5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3516.12, 4293.42 )
+position = Vector2( 3516.12, 159.496 )
 
 [node name="Hook6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3748.42, 4257.28 )
+position = Vector2( 3748.42, 123.357 )
 
 [node name="Hook7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3996.21, 4365.69 )
+position = Vector2( 3996.21, 231.767 )
+
+[node name="Respawn" parent="." instance=ExtResource( 3 )]
+position = Vector2( 44.8149, 413.872 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 47.8211, 409.097 )
+
+[node name="Camera" parent="Player" instance=ExtResource( 6 )]
+position = Vector2( 105.294, 221.556 )
+
+[node name="Pos1" parent="Player/Camera" index="0"]
+position = Vector2( -155.418, -558.266 )
+
+[node name="Pos2" parent="Player/Camera" index="1"]
+position = Vector2( 6911.28, 99.5727 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 4573.08
+margin_top = -174.83
+margin_right = 4613.08
+margin_bottom = -134.83
+rect_scale = Vector2( 129.99, 34.068 )
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1025.89, 229.419 )
+the_text = "Pero...., y ahora que hago?"
+
+[node name="Text3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2799.67, 351.769 )
+the_text = "Cual es mi proposito ahora si ya encontre mi llave"
+
+[node name="Text4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4625.55, 197.921 )
+the_text = "Que hago ahora...."
+
+[node name="Text" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6396.45, 190.057 )
+the_text = "No hay viento favorable para el que no sabe donde va        -Senesca"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 5663.3, 353.478 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+"anims/New Anim" = SubResource( 2 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+[editable path="Player/Camera"]
