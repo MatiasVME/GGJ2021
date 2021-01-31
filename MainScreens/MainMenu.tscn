@@ -204,3 +204,4 @@ __meta__ = {
 }
 [connection signal="body_entered" from="Start" to="." method="_on_Start_body_entered"]
 [connection signal="body_entered" from="Exit" to="." method="_on_Exit_body_entered"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]

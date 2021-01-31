@@ -6,6 +6,7 @@
 [ext_resource path="res://Sounds/BGM/Candado_Nvl1 .ogg" type="AudioStream" id=4]
 
 [node name="MusicManager" type="Node"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="Nivel_1" type="AudioStreamPlayer" parent="."]
