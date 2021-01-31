@@ -162,7 +162,7 @@ the_text = "Que hago ahora...."
 
 [node name="Text" parent="." instance=ExtResource( 8 )]
 position = Vector2( 6396.45, 190.057 )
-the_text = "No hay viento favorable para el que no sabe donde va        -Senesca"
+the_text = "No hay viento favorable para el que no sabe a donde va        -Senesca"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 5663.3, 353.478 )
