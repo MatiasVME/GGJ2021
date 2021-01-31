@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Game/Background/fondo_nivel1.png" type="Texture" id=1]
 [ext_resource path="res://Game/Levels/Level_2/nivel2.png" type="Texture" id=2]
@@ -8,8 +8,12 @@
 [ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Levels/Level_2/Level_2.gd" type="Script" id=7]
 [ext_resource path="res://Game/EndLevel/EndLevel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game/Text/Text.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 166.302
 
 [node name="Level_2" type="Node2D"]
 script = ExtResource( 7 )
@@ -109,4 +113,15 @@ position = Vector2( 94.9347, 353.816 )
 [node name="Camera" parent="Player" instance=ExtResource( 6 )]
 position = Vector2( -0.726395, 1.00656 )
 
+[node name="Pos2" parent="Player/Camera" index="1"]
+position = Vector2( 3113.21, 360.221 )
+
+[node name="Collision" parent="EndLevel" index="0"]
+shape = SubResource( 2 )
+
+[node name="Text" parent="." instance=ExtResource( 9 )]
+position = Vector2( 509.594, 231.634 )
+the_text = "Y esto no sera tan facil"
+
+[editable path="Player/Camera"]
 [editable path="EndLevel"]
