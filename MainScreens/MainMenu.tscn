@@ -10,14 +10,14 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.2255, 20.2079 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 20.2044, 19.8987 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 1 )
 
@@ -82,14 +82,14 @@ position = Vector2( 443.735, 376.232 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Start"]
 position = Vector2( 20.0275, 19.764 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="Start"]
 margin_left = -22.091
 margin_top = -37.0905
 margin_right = 59.909
 margin_bottom = 2.90948
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -100,14 +100,14 @@ position = Vector2( 909.047, 373.057 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2( 20.0275, 19.764 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="Exit"]
 margin_left = -12.3235
 margin_top = -34.088
 margin_right = 49.6765
 margin_bottom = 5.91205
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -117,13 +117,24 @@ __meta__ = {
 position = Vector2( 661.076, 287.762 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 155.103, 514.157 )
+position = Vector2( 669.421, 139.531 )
 
 [node name="Credits" type="TextureButton" parent="."]
 margin_left = 1029.0
 margin_top = 89.0
 margin_right = 1197.0
 margin_bottom = 227.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Credits"]
+margin_left = -11.634
+margin_top = 54.7189
+margin_right = 121.366
+margin_bottom = 94.7189
+custom_fonts/font = SubResource( 4 )
+text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
 }
