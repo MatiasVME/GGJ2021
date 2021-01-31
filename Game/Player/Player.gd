@@ -13,6 +13,7 @@ var direction := 0
 var can_jump = true
 var hooked = false
 var salto = false
+var incrementSound = 0.0
 
 func _physics_process(delta):
 	if not hooked:
@@ -25,14 +26,20 @@ func walk(delta):
 	var friction = false
 	
 	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-	
+	incrementSound += delta
 	if direction == 1:
 		$sprite.set_flip_h(false)
 		$sprite.play("walk")
+		if incrementSound > 0.4 && is_on_floor():
+			SoundManager.play_sound("CANDADO_PASOS")
+			incrementSound = 0
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 	elif direction == -1:
 		$sprite.set_flip_h(true)
 		$sprite.play("walk")
+		if incrementSound > 0.4 && is_on_floor():
+			SoundManager.play_sound("CANDADO_PASOS")
+			incrementSound = 0
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 	else:
 		$sprite.play("idle")

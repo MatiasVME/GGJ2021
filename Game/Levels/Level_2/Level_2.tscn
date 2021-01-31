@@ -100,6 +100,13 @@ position = Vector2( 2246.57, 317.145 )
 [node name="Respawn" parent="." instance=ExtResource( 4 )]
 position = Vector2( 93.4431, 345.024 )
 
+[node name="EndLevel" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3002.76, 428.801 )
+next_scene = "res://Game/Levels/Level_3/Level_3.tscn"
+
+[node name="Collision" parent="EndLevel" index="0"]
+position = Vector2( 3.896, 0 )
+
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 94.9347, 353.816 )
 
@@ -109,10 +116,6 @@ position = Vector2( -0.726395, 1.00656 )
 [node name="Pos2" parent="Player/Camera" index="1"]
 position = Vector2( 3113.21, 360.221 )
 
-[node name="EndLevel" parent="." instance=ExtResource( 8 )]
-position = Vector2( 3084.58, 358.672 )
-next_scene = "res://Game/Levels/Level_3/Level_3.tscn"
-
 [node name="Collision" parent="EndLevel" index="0"]
 shape = SubResource( 2 )
 
@@ -121,5 +124,4 @@ position = Vector2( 509.594, 231.634 )
 the_text = "Y esto no sera tan facil"
 
 [editable path="Player/Camera"]
-
 [editable path="EndLevel"]
