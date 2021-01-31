@@ -7,7 +7,6 @@
 [ext_resource path="res://Game/Levels/Level_1/Level_1.gd" type="Script" id=5]
 [ext_resource path="res://Game/Camera/Camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Game/Respawn/Respawn.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Game/Respawn/Respawn.gd" type="Script" id=8]
 [ext_resource path="res://Game/EndLevel/EndLevel.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -106,9 +105,9 @@ position = Vector2( 1639.26, 182.824 )
 the_text = "A veces, esto es pan comido!!"
 
 [node name="Respawn" parent="." instance=ExtResource( 7 )]
-script = ExtResource( 8 )
 
 [node name="EndLevel" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2758.72, 374.274 )
+next_scene = "res://Game/Levels/Level_2/Level_2.tscn"
 
 [editable path="EndLevel"]
