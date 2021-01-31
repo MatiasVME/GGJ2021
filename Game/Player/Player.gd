@@ -12,6 +12,7 @@ var motion = Vector2()
 var direction := 0
 var can_jump = true
 var hooked = false
+var salto = false
 
 func _physics_process(delta):
 	if not hooked:
@@ -26,10 +27,15 @@ func walk(delta):
 	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	
 	if direction == 1:
+		$sprite.set_flip_h(false)
+		$sprite.play("walk")
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 	elif direction == -1:
+		$sprite.set_flip_h(true)
+		$sprite.play("walk")
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 	else:
+		$sprite.play("idle")
 		motion.x = 0
 		friction = true
 	
@@ -40,9 +46,18 @@ func walk(delta):
 			motion.x = lerp(motion.x,0, 0.2)
 		if not can_jump:
 			can_jump = true
+			salto = false
 	else:
+		if motion.y < 0:
+			if not salto:
+				$sprite.play("saltoA")
+			else:
+				$sprite.play("saltoB")
+		else:
+			$sprite.play("saltoB")
 		if can_jump:
 			if Input.is_action_just_pressed("ui_select"):
+					salto = true
 					motion.y = JUMP_FORCE
 					can_jump = false
 		if friction:
@@ -51,6 +66,7 @@ func walk(delta):
 	motion = move_and_slide(motion, Vector2(0,-1))
 
 func seized():
+	$sprite.play("hook")
 	if not can_jump:
 		can_jump = true
 	
