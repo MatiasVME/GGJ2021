@@ -36,6 +36,7 @@ script = ExtResource( 5 )
 layer = -1
 
 [node name="Background" type="Sprite" parent="HUD"]
+position = Vector2( -104.65, 0 )
 texture = ExtResource( 1 )
 centered = false
 
