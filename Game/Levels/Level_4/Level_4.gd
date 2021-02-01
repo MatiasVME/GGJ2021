@@ -12,3 +12,7 @@ func _physics_process(_delta):
 func _on_Area2D_body_entered(body):
 	if body == $Player:
 		$Anim.play("New Anim")
+
+
+func _on_Anim_animation_finished(anim_name):
+	Transition.change_scene("res://MainScreens/Credits.tscn")

@@ -15,7 +15,7 @@
 extents = Vector2( 225.279, 135.716 )
 
 [sub_resource type="Animation" id=3]
-length = 3.0
+length = 8.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -23,10 +23,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 3, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 
 [node name="Level_4" type="Node2D"]
@@ -150,7 +150,7 @@ __meta__ = {
 
 [node name="Text2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1025.89, 229.419 )
-the_text = "Pero...., y ahora que hago?"
+the_text = "Pero... y ahora que hago?"
 
 [node name="Text3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2799.67, 351.769 )
@@ -158,10 +158,10 @@ the_text = "Cual es mi proposito ahora si ya encontre mi llave"
 
 [node name="Text4" parent="." instance=ExtResource( 8 )]
 position = Vector2( 4625.55, 197.921 )
-the_text = "Que hago ahora...."
+the_text = "Que hago ahora..."
 
 [node name="Text" parent="." instance=ExtResource( 8 )]
-position = Vector2( 6396.45, 190.057 )
+position = Vector2( 6396.45, 188.375 )
 the_text = "No hay viento favorable para el que no sabe a donde va        -Senesca"
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -173,5 +173,8 @@ shape = SubResource( 2 )
 [node name="Anim" type="AnimationPlayer" parent="."]
 "anims/New Anim" = SubResource( 3 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="animation_finished" from="Anim" to="." method="_on_Anim_animation_finished"]
 
 [editable path="Player/Camera"]
+
+[editable path="Text"]

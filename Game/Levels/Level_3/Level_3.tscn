@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Game/Levels/Level_3/Level_3.gd" type="Script" id=1]
 [ext_resource path="res://Game/Levels/Level_3/nivel3.png" type="Texture" id=2]
@@ -44,6 +44,9 @@ tracks/1/keys = {
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 289.389
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 28, 124 )
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource( 1 )
@@ -107,6 +110,14 @@ the_text = "Una nueva aventura!"
 [node name="Text4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4545, 2797 )
 the_text = "A empezar otra vez..."
+
+[node name="Text5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7212, 2949 )
+the_text = "Se ve mi llave!!"
+
+[node name="Text6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7587, 3959 )
+the_text = "Mi llave! Mi llave!"
 
 [node name="Text2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3898, 2222 )
@@ -183,6 +194,13 @@ position = Vector2( 6664, 650 )
 
 [node name="Goodkey" parent="." instance=ExtResource( 10 )]
 position = Vector2( 7931, 4016 )
+
+[node name="TempWall" type="KinematicBody2D" parent="."]
+position = Vector2( 4147, 2342 )
+
+[node name="Collision" type="CollisionShape2D" parent="TempWall"]
+position = Vector2( 0, -39 )
+shape = SubResource( 4 )
 [connection signal="body_entered" from="AnimZoom" to="." method="_on_AnimZoom_body_entered"]
 
 [editable path="Text2"]
